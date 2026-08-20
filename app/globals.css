@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-outfit: 'Outfit', sans-serif;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+  --bg-color: #FAF8F5;
+  --lego-red: #E3000B;
+  --lego-yellow: #FFD000;
+  --lego-blue: #0055BF;
+  --lego-green: #00853D;
+  --lego-purple: #7C3AED;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+  color: #18181B;
+}
+
+body {
+  font-family: var(--font-space-grotesk);
+  background-color: #FAF8F5;
+  overflow-x: hidden;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #FFD000;
+  color: #121214;
+}
+
+/* Baseplate dot matrix grid pattern */
+.bg-baseplate-pattern {
+  background-image: radial-gradient(circle, #D8D2C4 1.75px, transparent 1.75px);
+  background-size: 24px 24px;
+}
+
+.bg-baseplate-dark {
+  background-image: radial-gradient(circle, #2C2C32 1.75px, transparent 1.75px);
+  background-size: 24px 24px;
+}
+
+.bg-baseplate-yellow {
+  background-image: radial-gradient(circle, #D4A800 2px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+/* LEGO Stud Emboss Styling */
+.lego-stud {
+  border-radius: 9999px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.45) 0%, rgba(0, 0, 0, 0.15) 100%);
+  box-shadow: inset 0 1.5px 2px rgba(255, 255, 255, 0.6), 0 3px 6px rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+.lego-stud::after {
+  content: "LEGO";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  opacity: 0.35;
+  color: #000;
+  font-family: var(--font-outfit);
+}
+
+/* Tactile 3D Block Buttons */
+.btn-tactile {
+  transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+}
+
+.btn-tactile:active {
+  transform: translateY(3px);
+}
+
+.btn-tactile-red {
+  background-color: #E3000B;
+  color: white;
+  box-shadow: 0 4px 0 0 #B80009, 0 8px 16px -2px rgba(227, 0, 11, 0.4);
+}
+.btn-tactile-red:hover {
+  background-color: #F0000C;
+}
+.btn-tactile-red:active {
+  box-shadow: 0 1px 0 0 #B80009, 0 2px 4px rgba(227, 0, 11, 0.2);
+}
+
+.btn-tactile-yellow {
+  background-color: #FFD000;
+  color: #121214;
+  box-shadow: 0 4px 0 0 #C99700, 0 8px 16px -2px rgba(255, 208, 0, 0.4);
+}
+.btn-tactile-yellow:hover {
+  background-color: #FFE033;
+}
+.btn-tactile-yellow:active {
+  box-shadow: 0 1px 0 0 #C99700, 0 2px 4px rgba(255, 208, 0, 0.2);
+}
+
+.btn-tactile-dark {
+  background-color: #18181B;
+  color: #FFFFFF;
+  box-shadow: 0 4px 0 0 #09090B, 0 8px 16px -2px rgba(0, 0, 0, 0.25);
+}
+.btn-tactile-dark:hover {
+  background-color: #27272A;
+}
+.btn-tactile-dark:active {
+  box-shadow: 0 1px 0 0 #09090B, 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B5AEA0;
+}
