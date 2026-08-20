@@ -88,8 +88,8 @@ lego-lifeblocks/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/lego-lifeblocks.git
-   cd lego-lifeblocks
+   git clone https://github.com/Rutuja20023/lego_lifeblocks.git
+   cd lego_lifeblocks
    ```
 
 2. **Install dependencies**:
@@ -117,7 +117,7 @@ lego-lifeblocks/
 
 1. Push this repository to your GitHub account (make sure it's public).
 2. Visit [Vercel](https://vercel.com) and click **Add New Project**.
-3. Import your `lego-lifeblocks` repository.
+3. Import your `lego_lifeblocks` repository (`https://github.com/Rutuja20023/lego_lifeblocks`).
 4. Deploy with standard Next.js default settings.
 5. Your live link will be ready in under 1 minute!
 
